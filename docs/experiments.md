@@ -46,9 +46,9 @@ The same run has zero reported divergences and E-BFMI values between 0.875 and 0
 
 ## Evidence files
 
-- `results/paired-comparison.csv`: function variability and prediction metrics.
-- `results/function-diagnostics.csv`: pointwise diagnostics.
-- `results/sampler-diagnostics.csv`: per-chain sampler diagnostics.
-- `assets/ridge-stan-functions.png`: unmodified embedded image from Figure 38.
+- [Paired comparison](../results/paired-comparison.csv): function variability and prediction metrics.
+- [Function diagnostics](../results/function-diagnostics.csv): pointwise diagnostics.
+- [Sampler diagnostics](../results/sampler-diagnostics.csv): per-chain sampler diagnostics.
+- [Ridge and Stan function comparison](../assets/ridge-stan-functions.png): unmodified embedded image from Figure 38.
 
 No raw Stan chains or original experiment scripts are included in the supplied report. The numerical companion illustrates the documented fixed-scale calculations and does not regenerate the reported Stan tables.

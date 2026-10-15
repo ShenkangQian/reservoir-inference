@@ -4,9 +4,12 @@ The `reference` module implements the equations for a fixed-scale random-feature
 
 ## Environment
 
-Use Python 3.10 or later. Install the two declared dependencies from `requirements.txt` in a virtual environment. The example uses only a CPU and creates all observations locally from a seeded random number generator.
+Use Python 3.10 or later and run the commands below from the repository root. The example uses only a CPU and creates all observations locally from a seeded random number generator. Install the two dependencies listed in [requirements.txt](../requirements.txt) in a virtual environment:
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 python -m reference.demo --seed 42 --output outputs/demo
 python -m unittest discover -s tests -v
 ```

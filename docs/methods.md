@@ -16,14 +16,14 @@ $$
 
 This corresponds to $w\sim N(0,\sigma^2 I/\lambda)$. This prior convention follows directly by completing the square and fixes the scale convention in the paragraph preceding Equation 7 of the report. The covariance is computed from a Cholesky factor; the implementation does not form a matrix inverse for the mean.
 
-A ridge-only function draw is $F_*m_w$. A conditional Bayesian draw samples $w\sim N(m_w,V_w)$ before evaluating $F_*w$. The latter includes readout uncertainty conditional on the chosen hidden-feature draw. Future-observation draws additionally include independent observation noise.
+A ridge-only function draw is $F_{\ast}m_w$. A conditional Bayesian draw samples $w\sim N(m_w,V_w)$ before evaluating $F_{\ast}w$. The latter includes readout uncertainty conditional on the chosen hidden-feature draw. Future-observation draws additionally include independent observation noise.
 
 ### From the readout posterior to function covariance
 
-For a prediction grid, write $m_*(A,B)=F_*m_w$ and $V_*(A,B)=F_*V_wF_*^\top$. For any specified distribution over the hidden features, the corresponding mixture has
+For a prediction grid, write $m_{\ast}(A,B)=F_{\ast}m_w$ and $V_{\ast}(A,B)=F_{\ast}V_wF_{\ast}^\top$. For any specified distribution over the hidden features, the corresponding mixture has
 
 $$
-\mathrm{Cov}(h_*)=\mathbb E[V_*(A,B)]+\mathrm{Cov}(m_*(A,B)).
+\mathrm{Cov}(h_{\ast})=\mathbb E[V_{\ast}(A,B)]+\mathrm{Cov}(m_{\ast}(A,B)).
 $$
 
 The first term describes uncertainty in the readout within a fixed feature map; the second describes movement of the conditional mean across feature maps. Substituting $m_w$ for sampled readouts preserves the second term and discards the first. This is a covariance identity; a particular empirical quantile interval need not widen monotonically at every location in a finite simulation.
@@ -32,7 +32,7 @@ In the companion, the distribution over $A,B$ is the diagonal Gaussian approxima
 
 The Gaussian readout prior and ridge penalty must agree for this conditional-mean interpretation. More generally, a prior $w\sim N(0,\tau_w^2 I)$ implies $\lambda=\sigma^2/\tau_w^2$. The hierarchical report sets $\tau_w=1$; a directly matched ridge comparison would therefore use $\lambda=\sigma^2$. The companion states and enforces its own matched convention. The report's original execution settings are not reconstructed here.
 
-The [numerical tests](../tests/test_reference.py) check $(F^\top F+\lambda I)m_w=F^\top y$ and $(F^\top F+\lambda I)V_w=\sigma^2 I$. A separate Monte Carlo check compares the variance of a scalar prediction with $\phi_*^\top V_w\phi_*$.
+The [numerical tests](../tests/test_reference.py) check $(F^\top F+\lambda I)m_w=F^\top y$ and $(F^\top F+\lambda I)V_w=\sigma^2 I$. A separate Monte Carlo check compares the variance of a scalar prediction with $\phi_{\ast}^\top V_w\phi_{\ast}$.
 
 ## Simplified diagonal TAGI
 

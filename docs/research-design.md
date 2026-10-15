@@ -44,7 +44,7 @@ The report's `K = 10` comparison uses four chains with 250 retained draws each a
 The RMSE of the posterior mean is
 
 $$
-\sqrt{\frac{1}{n_*}\sum_i(\bar h(x_i)-h_{\mathrm{true}}(x_i))^2}.
+\sqrt{\frac{1}{n_{\ast}}\sum_i(\bar h(x_i)-h_{\mathrm{true}}(x_i))^2}.
 $$
 
 The posterior mean of per-draw RMSE instead computes an RMSE for every sampled curve and then averages those errors. Nonlinearity makes these distinct. The report lists the latter as 0.0613 for ridge and 0.0690 for joint Stan; these are compatible with the smaller errors of the fitted means above. The [result notes](experiments.md) keep these definitions separate.
