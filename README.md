@@ -85,7 +85,7 @@ For the asymmetric oscillatory target, with `K = 10`, four chains, and 1,000 ret
 These measurements are transcribed from Figure 39. They show nearly unchanged mean prediction and appreciably different uncertainty. With matched prior and penalty conventions, the distinction has a precise explanation:
 
 $$
-\mathrm{Var}(h_*\mid D)=\mathbb E[\mathrm{Var}(h_*\mid A,B,D)\mid D]+\mathrm{Var}(\mathbb E[h_*\mid A,B,D]\mid D).
+\mathrm{Var}(h_{\ast}\mid D)=\mathbb E[\mathrm{Var}(h_{\ast}\mid A,B,D)\mid D]+\mathrm{Var}(\mathbb E[h_{\ast}\mid A,B,D]\mid D).
 $$
 
 Replacing the readout by its conditional mean removes the first term. The companion demonstrates this identity under its explicit model; the [research-design note](docs/research-design.md) distinguishes that calculation from the archived Stan comparison.
