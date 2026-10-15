@@ -1,0 +1,3 @@
+method,max_rhat,min_bulk_ess,min_tail_ess,max_mcse_over_sd,points_rhat_ge_1_01
+ridge,1.0159,488,485,0.0466,9
+joint_stan,1.007,690,500,0.0388,0

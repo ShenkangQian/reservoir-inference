@@ -1,0 +1,5 @@
+chain,retained_draws,divergences,max_depth_hits,e_bfmi
+1,250,0,213,0.974
+2,250,0,231,0.899
+3,250,0,187,0.934
+4,250,0,186,0.875

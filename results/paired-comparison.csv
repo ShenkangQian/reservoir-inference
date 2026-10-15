@@ -1,0 +1,3 @@
+method,mean_pointwise_sd,mean_90_interval_width,grid_rmse_truth,test_rmse_truth,test_rmse_noisy_y
+ridge,0.0275,0.0884,0.0579,0.0534,0.2866
+joint_stan,0.0415,0.1358,0.058,0.0536,0.2867
